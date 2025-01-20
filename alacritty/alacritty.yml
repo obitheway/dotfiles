@@ -1,0 +1,61 @@
+# Alacritty configuration file
+
+# Import the aura-dark theme
+import:
+  - "~/.config/alacritty/aura-theme.toml"
+
+# Window
+window:
+  # Window dimensions (in pixels)
+  dimensions:
+    columns: 120
+    lines: 36
+
+  # Window position
+  position:
+    x: 0
+    y: 0
+
+  # Set the initial transparency
+  opacity: 0.95
+
+  # Enable/Disable window decorations
+  decorations: full
+
+  # Allow the terminal to resize with the window
+  dynamic_padding: true
+
+# Font
+font:
+  # Font family
+  family: "Fira Code"
+
+  # Font size
+  size: 12.0
+
+  # Optional: Enable anti-aliasing for fonts
+  # hinting: full
+
+  # Optional: Enable smart quotes
+  # smart_quotes: true
+
+# Scrolling
+scrolling:
+  # Enable smooth scrolling
+  history: 10000
+  multiplier: 3
+
+# Mouse
+mouse:
+  # Enable mouse support (for copy/paste)
+  hide_when_typing: true
+
+# Keybindings (Optional)
+key_bindings:
+  - { key: V, mods: Control, action: Paste }
+  - { key: C, mods: Control, action: Copy }
+  - { key: Q, mods: Control, action: Quit }
+
+# Background opacity (optional)
+background_opacity: 0.8
+

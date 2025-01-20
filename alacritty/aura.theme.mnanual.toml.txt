@@ -1,0 +1,67 @@
+# General configuration 
+[general] 
+import = [ 
+   "~/.config/alacritty/themes/aura-theme.toml" 
+] 
+
+# Window settings 
+[window] 
+ dimensions = { columns = 100, lines = 90 } 
+ position = { x = 0, y = 0 } 
+ opacity = 0.85 
+ decorations = "full" 
+ dynamic_padding = true 
+
+# Font configuration 
+[font] 
+ normal = { family = "Hack", style = "Regular" } 
+ bold   = { family = "Hack", style = "Bold" } 
+ italic = { family = "Hack", style = "Italic" } 
+ size = 10.0 
+
+# Scrolling settings 
+[scrolling] 
+ history = 10000 
+ multiplier = 3 
+
+# Mouse settings 
+[mouse] 
+ hide_when_typing = true 
+
+# Keybindings 
+# Background opacity 
+
+# Test theme manual from them.toml 
+[colors.primary] 
+background = '#15141b' 
+foreground = '#edecee' 
+
+# Normal colors 
+[colors.normal] 
+black   = '#110f18' 
+red     = '#ff6767' 
+green   = '#61ffca' 
+yellow  = '#ffca85' 
+blue    = '#a277ff' 
+magenta = '#a277ff' 
+cyan    = '#61ffca' 
+white   = '#edecee' 
+
+# Bright colors 
+[colors.bright] 
+black   = '#4d4d4d' 
+red     = '#ff6767' 
+green   = '#61ffca' 
+yellow  = '#ffca85' 
+blue    = '#a277ff' 
+magenta = '#a277ff' 
+cyan    = '#61ffca' 
+white   = '#edecee' 
+
+[colors.selection] 
+text       = 'CellForeground' 
+background = '#29263c' 
+
+[colors.cursor] 
+cursor = '#a277ff'
+ 

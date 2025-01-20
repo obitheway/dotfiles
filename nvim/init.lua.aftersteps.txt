@@ -1,0 +1,8 @@
+# After placing the file, open nvim and:
+
+# Be sure that the theme files i.e theme.toml theme.yaml are in the same directory and referenced
+
+:PackerInstall # if neccessary
+:PackerSync -- login to github if prompted
+Restart Alacrity
+
