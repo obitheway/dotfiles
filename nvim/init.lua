@@ -1,3 +1,5 @@
+require("nvim-web-devicons")
+
 -- Ensure packer is installed
 local ensure_packer = function()
   local fn = vim.fn
@@ -38,28 +40,38 @@ require("packer").startup(function(use)
   -- git-gutter
   use 'airblade/vim-gitgutter'
 
-  -- Add NvimTree plugin
-  use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {'nvim-tree/nvim-web-devicons'}, --These don't seem 2 be loadingOptional: for icons
-    config = function()
-      -- NvimTree configuration
-      require('nvim-tree').setup({
-        -- Disable netrw at the very start
-        disable_netrw = true,
-        hijack_netrw = true,
-        view = {
-          width = 30,  -- Set file tree width
-          side = "left",  -- Position file tree on the left
+  -- Add the nvim-tree plugin
+use {
+  'nvim-tree/nvim-tree.lua',
+  requires = {'nvim-tree/nvim-web-devicons'}, -- Ensure this dependency is included
+  config = function()
+    -- NvimTree configuration
+    require('nvim-tree').setup({
+      -- Disable netrw at the very start
+      disable_netrw = true,
+      hijack_netrw = true,
+      view = {
+        width = 30,  -- Set file tree width
+        side = "left",  -- Position file tree on the left
+      },
+      git = {
+        enable = true,
+        ignore = false,
+      },
+      renderer = {
+        -- Enable icons
+        icons = {
+          show = {
+            git = true,
+            folder = true,
+            file = true,
+            folder_arrow = true,
+          },
         },
-        git = {
-          enable = true,
-          ignore = false,
-        },
-      })
-    end
-  }
-
+      },
+    })
+  end
+}
     -- Set up nvim-cmp.
   local cmp = require'cmp'
 
